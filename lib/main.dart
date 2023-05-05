@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tasks_app/blocs/bloc_exports.dart';
 import 'package:flutter_tasks_app/blocs/my_bloc_observer.dart';
+import 'package:flutter_tasks_app/screens/tab_screen.dart';
 import 'package:flutter_tasks_app/services/app_router.dart';
 import 'package:flutter_tasks_app/services/app_theme.dart';
 import 'package:path_provider/path_provider.dart';
-
-import 'screens/tasks_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,8 +36,9 @@ class MyApp extends StatelessWidget {
             theme: state.switchValue
                 ? AppThemes.appThemeData[AppTheme.darkTheme]
                 : AppThemes.appThemeData[AppTheme.lightTheme],
-            home: const TasksScreen(),
+            home: TabsScreen(),
             onGenerateRoute: appRouter.onGenerateRoute,
+            debugShowCheckedModeBanner: false,
           );
         },
       ),
