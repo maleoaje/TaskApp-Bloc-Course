@@ -38,7 +38,7 @@ class _TasksScreenState extends State<TasksScreen> {
               )
             ],
           ),
-          drawer: const TaskDrawer(),
+          drawer: TaskDrawer(),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
