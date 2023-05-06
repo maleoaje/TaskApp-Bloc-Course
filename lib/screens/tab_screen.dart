@@ -3,7 +3,7 @@ import 'package:flutter_tasks_app/screens/completed_tasks_screen.dart';
 import 'package:flutter_tasks_app/screens/favorite_tasks_screen.dart';
 import 'package:flutter_tasks_app/screens/task_draweer.dart';
 import 'package:flutter_tasks_app/screens/pending_tasks_screen.dart';
-import 'package:flutter_tasks_app/widgets/add_tasks.dart';
+import 'package:flutter_tasks_app/screens/add_tasks_screen.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({
@@ -36,6 +36,7 @@ class _TabsScreenState extends State<TabsScreen> {
   void _addTask(BuildContext context) {
     showModalBottomSheet(
         context: context,
+        isScrollControlled: true,
         builder: (context) => const SingleChildScrollView(
               child: AddTaskScreen(),
             ));
